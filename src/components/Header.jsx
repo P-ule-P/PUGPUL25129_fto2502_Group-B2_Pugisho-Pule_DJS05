@@ -1,6 +1,15 @@
 import React from "react";
 import Search from "./Search";
 
+/**
+ * Header component that displays the app logo, title, search input, and user icon.
+ *
+ * @component
+ * @param {Object} props
+ * @param {string} props.searchTerm - The current value of the search input.
+ * @param {Function} props.setSearchPodcasts - Function to update the search input state.
+ * @returns {JSX.Element} The rendered Header component.
+ */
 export const Header = ({ searchTerm, setSearchPodcasts }) => {
   return (
     <header className="header">

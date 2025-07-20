@@ -1,3 +1,9 @@
+/**
+ * Converts a past date into a human-readable "time ago" format.
+ *
+ * @param {string|number|Date} dateInput - A date string, timestamp, or Date object representing a past date.
+ * @returns {string} A string like "5 minutes ago", "2 days ago", etc.
+ */
 export function formatTimeAgo(dateInput) {
   const now = new Date();
   const past = new Date(dateInput);

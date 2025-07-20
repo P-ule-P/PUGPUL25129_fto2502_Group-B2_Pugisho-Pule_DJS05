@@ -1,0 +1,108 @@
+/* --------------------- Media Queries --------------------- */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1rem;
+  }
+
+  .podcast-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    padding: 1rem;
+  }
+
+  .show-summary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detail-cover {
+    width: 100%;
+    height: auto;
+  }
+
+  .season-info-conatainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .episode {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .season-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .episode-img {
+    width: 120px;
+    height: auto;
+  }
+
+  .genre-time-conatiner,
+  .total-seasons-episodes {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .season-select-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* Phones (480px and below) */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-title {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-container {
+    width: 100%;
+    justify-content: space-between;
+    order: 1;
+  }
+
+  .search-input {
+    flex: 1;
+    width: 100%;
+  }
+
+  .page-btn {
+    padding: 5px 8px;
+    font-size: 0.85rem;
+  }
+
+  .genre-tags span {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+  }
+
+  .ep-title {
+    font-size: 0.95rem;
+  }
+
+  .ep-desc {
+    font-size: 0.8rem;
+  }
+}

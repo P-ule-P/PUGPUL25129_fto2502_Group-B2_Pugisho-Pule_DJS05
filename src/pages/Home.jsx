@@ -9,6 +9,13 @@ import { genres } from "../data/genres";
 
 const ITEMS_PER_PAGE = 12;
 
+/**
+ * Home page component that displays a searchable, filterable, sortable,
+ * and paginated list of podcasts.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered Home component with Header, Filters, Grid, and Pagination.
+ */
 export default function Home() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [podcasts, setPodcasts] = useState([]);
@@ -25,6 +32,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Sync URL parameters when filters change
   useEffect(() => {
     setSearchParams({
       search: searchPodcasts,
@@ -34,6 +42,7 @@ export default function Home() {
     });
   }, [searchPodcasts, genre, sort, currentPage, setSearchParams]);
 
+  // Initial fetch of podcast data
   useEffect(() => {
     async function fetchData() {
       try {
@@ -49,6 +58,7 @@ export default function Home() {
     fetchData();
   }, []);
 
+  // Apply search, filter, and sort on data
   useEffect(() => {
     let result = [...podcasts];
 

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { fetchShowById } from "../utils/api";
-import { formatTimeAgo } from "../utils/time";
-import { mapGenreIdsToNames } from "../utils/genreUtils";
 import { genres } from "../data/genres";
 
 export default function ShowDetail() {

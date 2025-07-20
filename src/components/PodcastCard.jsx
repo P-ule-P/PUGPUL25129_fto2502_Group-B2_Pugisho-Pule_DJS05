@@ -3,6 +3,22 @@ import { formatTimeAgo } from "../utils/time";
 import { mapGenreIdsToNames } from "../utils/genreUtils";
 import { useNavigate } from "react-router-dom";
 
+/**
+ * PodcastCard component displays a summary preview of a single podcast.
+ *
+ * @component
+ * @param {Object} props
+ * @param {Object} props.podcast - The podcast data object.
+ * @param {number} props.podcast.id - Unique ID of the podcast.
+ * @param {string} props.podcast.title - Title of the podcast.
+ * @param {string} props.podcast.image - Image URL of the podcast.
+ * @param {number} props.podcast.seasons - Number of seasons in the podcast.
+ * @param {number[]} props.podcast.genres - List of genre IDs associated with the podcast.
+ * @param {number} props.podcast.updated - Last updated timestamp.
+ * @param {Array} props.genres - Full genre list used to resolve genre names.
+ *
+ * @returns {JSX.Element} The rendered podcast card component.
+ */
 export const PodcastCard = ({ podcast, genres }) => {
   const navigate = useNavigate();
   const genreNames = mapGenreIdsToNames(podcast.genres, genres);
